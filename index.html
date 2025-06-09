@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>4Kai</title>
@@ -13,10 +13,37 @@
       border-radius: 10px;
       text-align: center;
     }
+    #content {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <div class="small-title">Next Mission</div>
-  <div class="big-text">Cuddles in cabin <3 </div>
+  <div id="login">
+    <h2>This page is private</h2>
+    <p>Please enter the password to continue.</p>
+    <input type="password" id="password" placeholder="Password" />
+    <br /><br />
+    <button onclick="checkPassword()">Submit</button>
+    <p id="error" style="color: red;"></p>
+  </div>
+
+  <div id="content">
+    <div class="small-title">Next Mission</div>
+    <div class="big-text">Cuddles in cabin &lt;3 </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const error = document.getElementById("error");
+      if (input === "101124143") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        error.textContent = "Incorrect password.";
+      }
+    }
+  </script>
 </body>
 </html>
