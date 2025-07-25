@@ -87,44 +87,5 @@
   </style>
 </head>
 <body>
-  <div id="passwordContainer">
-    <p>Enter password to continue:</p>
-    <input type="text" id="passwordInput" placeholder="Enter password" />
-    <button onclick="checkPassword()">Enter</button>
-  </div>
-
-  <div id="mainContent">
-    <div class="header">
-      <div class="small-title">Next Mission</div>
-      <div class="big-text">Cuddles in cabin &lt;3</div>
-    </div>
-
-    <div class="content">
-      <div class="countdown" id="countdown"></div>
-    </div>
-  </div>
-
-  <script>
-    function checkPassword() {
-      const input = document.getElementById('passwordInput').value;
-      if (input === '101124143') {
-        document.getElementById('passwordContainer').style.display = 'none';
-        document.getElementById('mainContent').style.display = 'block';
-        updateCountdown();
-      } else {
-        alert('Wrong password.');
-      }
-    }
-
-    function updateCountdown() {
-      const targetDate = new Date('2025-07-14T00:00:00');
-      const now = new Date();
-      const diff = targetDate - now;
-      const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-
-      document.getElementById('countdown').textContent =
-        days > 0 ? `${days} days until cuddles 🧡` : "Cuddle time, sweetie 💖";
-    }
-  </script>
+  <p1> end <\p1>
 </body>
-</html>
